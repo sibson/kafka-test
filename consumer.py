@@ -1,10 +1,13 @@
 from utils import get_consumer
 
 
+COUNT = 100000
+
 consumer = get_consumer('topic')
 
 
-for msg in consumer:
-    print msg.message.value
+for ix, msg in enumerate(consumer):
+    if ix % COUNT:
+        print ix, msg.message.value
 
 consumer.close()
