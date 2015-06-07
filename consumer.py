@@ -1,7 +1,7 @@
 from utils import get_consumer
 
 
-COUNT = 100000
+COUNT = 1000
 
 consumer = get_consumer('topic')
 
